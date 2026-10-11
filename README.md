@@ -1,13 +1,15 @@
 # rolleigen
 
 [![](https://github.com/jasonjfoster/rolleigen/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/jasonjfoster/rolleigen/actions/workflows/check-standard.yaml)
+[![](https://www.r-pkg.org/badges/version/rolleigen)](https://cran.r-project.org/package=rolleigen)
 [![](https://codecov.io/gh/jasonjfoster/rolleigen/graph/badge.svg)](https://app.codecov.io/github/jasonjfoster/rolleigen)
+[![](https://cranlogs.r-pkg.org/badges/rolleigen?color=brightgreen)](https://www.r-pkg.org/pkg/rolleigen)
 
 ## Overview
 
 'rolleigen' provides fast and efficient computation of rolling and expanding eigenanalysis for time-series data.
 
-The 'rolleigen' package decomposes the covariance matrix of the explanatory variables into eigenvalues and eigenvectors to perform principal component analysis (Pearson, 1901, <doi:10.1080/14786440109462720>; Hotelling, 1933, <doi:10.1037/h0071325>) and principal component regression (Massy, 1965, <doi:10.1080/01621459.1965.10480787>) over rolling and expanding windows. For each window, the eigenvalues and eigenvectors are computed from the covariance matrix and, optionally, ordered from largest to smallest to summarize the directions of greatest variation in the data. A subset of leading components is then used to fit a regression that mitigates collinearity in the explanatory variables. Use cases include:
+The 'rolleigen' package decomposes the covariance matrix of the explanatory variables into eigenvalues and eigenvectors to perform principal component analysis (Pearson, 1901, <doi:10.1080/14786440109462720>; Hotelling, 1933, <doi:10.1037/h0071325>) and principal component regression (Massy, 1965, <doi:10.1080/01621459.1965.10480787>) over rolling and expanding windows. For each window, the eigenvalues and eigenvectors are computed from the covariance matrix and, optionally, ordered from the largest to smallest eigenvalue to summarize the directions of greatest variation in the data. A subset of leading components is then used to fit a regression that mitigates collinearity in the explanatory variables. Use cases include:
 
 * **Dimensionality reduction**: extracting a small number of components that capture the majority of variation across many correlated variables
 * **Factor extraction**: identifying latent factors that drive co-movement in a set of explanatory variables through time
